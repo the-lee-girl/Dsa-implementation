@@ -1,0 +1,16 @@
+def binarysearch(a,key):
+  low=0
+  high=len(a)-1
+  while low<=high:
+    mid=(low+high)//2
+    if key==a[mid]:
+      return True
+    elif key<a[mid]:
+      high=mid-1
+    else:
+      low=mid+1
+  return False
+a=list(map(int,input().split()))
+key=int(input())
+found=binarysearch(a,key)
+print(found)  
