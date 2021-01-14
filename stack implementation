@@ -1,0 +1,32 @@
+from exceptions import Empty
+class Arraystack:
+    def __init__(self):
+        sel._data = []
+    def __len(self):
+        return len(self._data)
+    def is_empty(self):
+        return len(self._data) == 0
+    
+    def push(self,e):
+        self._data.append(e)
+    
+    def pop(self):
+        if self.is_empty():
+            raise Empty("Stack is empty")
+        return self._data.pop()
+    
+    def top(self):
+        if self.is_empty():
+            raise Empty("Stack is empty")
+        return self._data[-1]
+class Empty(Exception):
+    pass
+
+s=ArrayStack()
+s.push(10)
+s.push(20)
+print('stack',s._data)
+print('length',len(s))
+print('isempty',s.is_empty())
+print('popped',s.pop())
+print('stack',s._data)
